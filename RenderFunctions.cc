@@ -14,7 +14,13 @@ quitScreen(sf::RenderWindow &window)
   text.setString("GAME OVER PRESS ESCAPE TO QUIT SPACE TO RESTART");
   window.draw(text);
   window.display();
-    
+
+  waitForKey(window);
+}
+
+void
+waitForKey(sf::RenderWindow& window)
+{
   //loop until a key is pressed
   while(true){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {window.close(); break;}
@@ -22,10 +28,10 @@ quitScreen(sf::RenderWindow &window)
   }
 }
 
+
 void
 initialize(Ball &ball)
 {
-  constexpr float ballRadius{10.f};
-  ball.setRadius(ballRadius); // set the ball radius
   ball.setPos(); //init ball back to center
+  ball.setVel(); //reset the velocity of the ball
 }

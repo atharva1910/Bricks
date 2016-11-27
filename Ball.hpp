@@ -21,17 +21,18 @@ public:
   Ball()   //constructor
   {
     circle.setFillColor(sf::Color::Red);
+    circle.setRadius(10);    
     setPos();    
   }
 
   //FUNCTIONS
-  void setRadius(float x); //set the radius of the ball
-  
   void setOrign();  //make the origin the same as the radius of the ball
 
   bool update(); // move the ball
 
   void setPos(); //set the position
+
+  void setVel(); //reset the velocity
 };
 
 #endif
