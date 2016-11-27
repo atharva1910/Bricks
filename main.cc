@@ -14,7 +14,7 @@ int main()
   initialize(ball);
   
   //Main loop
-  while (true) {
+  while (window.isOpen()) {
     
     window.clear(sf::Color::Black);
     

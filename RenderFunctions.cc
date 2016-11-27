@@ -10,14 +10,14 @@ quitScreen(sf::RenderWindow &window)
   
   sf::Text text;
   text.setFont(font);
-  text.setCharacterSize(10);
+  text.setCharacterSize(25);
   text.setString("GAME OVER PRESS ESCAPE TO QUIT SPACE TO RESTART");
   window.draw(text);
   window.display();
-
+    
   //loop until a key is pressed
   while(true){
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {window.close(); exit(0);}
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {window.close(); break;}
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) break;    
   }
 }

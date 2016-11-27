@@ -7,7 +7,7 @@ all:main.o Ball.o RenderFunctions.o
 Ball.o:Ball.hpp Ball.cc
 	$(CC) Ball.cc -c $(LDFLAGS)
 
-RenderFunctions.o:Ball.hpp RenderFunctions.hpp 
+RenderFunctions.o:Ball.hpp RenderFunctions.hpp RenderFunctions.cc
 	$(CC) RenderFunctions.cc -c $(LDFLAGS)	
 clean:
 	rm *.o main
