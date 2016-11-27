@@ -1,19 +1,27 @@
-#include <SFML/Window.hpp>
-
+#include "Ball.hpp"
 int main()
 {
-  //Create a new Window
-  sf::Window window(sf::VideoMode(800, 600), "Bricks",sf::Style::Close);
-
-  //Adding instance for window
+  constexpr int width{640},height{480};
+  constexpr float ballRadius{10.f};
+  
+  sf::RenderWindow window{sf::VideoMode(width,height), "Bricks"};   //Window size,name
+  
+  Ball ball(width/2,height/2);   //Ball instance
+  
+  ball.setRadius(ballRadius); // set the ball radius
+  
+  //Main loop
   while (true) {
-
-    //Check all events for every loop
-    sf::Event event;
-    while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed)
-	window.close();
-    }
+    
+    window.clear(sf::Color::Black);
+    
+    window.draw(ball.circle);
+    
+    //if escape pressed close window
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {window.close(); break;}
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {ball.update();}
+    
+    window.display();
   }
   return 0;
 }
