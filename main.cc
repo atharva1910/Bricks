@@ -1,16 +1,17 @@
-#include "Ball.hpp"
+//#include "Ball.hpp"
+#include "RenderFunctions.hpp"
+
+
 int main()
 {
   constexpr int width{640},height{480};
-  constexpr float ballRadius{10.f};
-  
   sf::RenderWindow window{sf::VideoMode(width,height), "Bricks"};   //Window size,name
 
   window.setFramerateLimit(60);
   
-  Ball ball(width/2,height/2);   //Ball instance
-  
-  ball.setRadius(ballRadius); // set the ball radius
+  Ball ball;
+
+  initialize(ball);
   
   //Main loop
   while (true) {
@@ -19,14 +20,15 @@ int main()
     
     window.draw(ball.circle);
     
-    //if escape pressed close window
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {window.close(); break;}
-
     //update the position of the ball
-    ball.update();
-    
-    window.display();
+    if(!ball.update()){
+      quitScreen(window); //displays quitscreen
+      initialize(ball);   //initlizes the ball back to center
+    }
+
+    window.display();          
   }
-  return 0;
+  return 0;  
 }
+
 

@@ -1,7 +1,7 @@
 #include "Ball.hpp"
 
-void Ball::
-setRadius(float x)
+void
+Ball::setRadius(float x)
 /*
   set the radius of the ball
 */
@@ -9,8 +9,8 @@ setRadius(float x)
   circle.setRadius(x);
 }
 
-void Ball::
-setOrign()
+void
+Ball::setOrign()
 /*
   make the origin the same as the redius of the ball
 */
@@ -19,8 +19,8 @@ setOrign()
 }
 
 
-void Ball::
-update()
+bool
+Ball::update()
 {
   //get the current x and y
   float xValue = circle.getPosition().x;
@@ -29,8 +29,16 @@ update()
   //change velocity if ball hits sides
   if(yValue < 0 ) velocity.y = vel;
   if(xValue < 0 ) velocity.x = vel;
-  if(yValue > height) velocity.y = -vel;
+  if(yValue > height) return false;
   if(xValue > width) velocity.x = -vel;
 
   circle.move(velocity);
+  return true;
 }
+
+void
+Ball::setPos()
+{
+  circle.setPosition(width/2,height/2);
+}
+  

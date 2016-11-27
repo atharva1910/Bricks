@@ -1,3 +1,6 @@
+#ifndef BALL_HPP_
+#define BALL_HPP_
+
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -7,17 +10,18 @@
 class Ball
 {
 private:
+  int height{480},width{620};  
   float vel{8.f};
-  int height{480},width{620};
+
 public:
   sf::CircleShape circle; // defines circle
   
   sf::Vector2f velocity{-vel,-vel}; //velocity of the ball
   
-  Ball(float x,float y)   //constructor
+  Ball()   //constructor
   {
-    circle.setPosition(x,y); //set position of the circle
     circle.setFillColor(sf::Color::Red);
+    setPos();    
   }
 
   //FUNCTIONS
@@ -25,5 +29,9 @@ public:
   
   void setOrign();  //make the origin the same as the radius of the ball
 
-  void update(); // move the ball
+  bool update(); // move the ball
+
+  void setPos(); //set the position
 };
+
+#endif
