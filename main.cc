@@ -5,6 +5,8 @@ int main()
   constexpr float ballRadius{10.f};
   
   sf::RenderWindow window{sf::VideoMode(width,height), "Bricks"};   //Window size,name
+
+  window.setFramerateLimit(60);
   
   Ball ball(width/2,height/2);   //Ball instance
   
@@ -19,7 +21,9 @@ int main()
     
     //if escape pressed close window
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {window.close(); break;}
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {ball.update();}
+
+    //update the position of the ball
+    ball.update();
     
     window.display();
   }
