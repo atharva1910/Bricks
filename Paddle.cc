@@ -1,4 +1,5 @@
 #include "Paddle.hpp"
+#include <iostream>
 
 
 void Paddle::update()
@@ -18,4 +19,25 @@ void Paddle::setPos()
 //Set the postion of the paddle at the mid
 {
   paddle.setPosition(rightLimit/2.f , 480 - paddleHeight);
+}
+
+float
+Paddle::top()
+{
+  std::cout <<paddle.getPosition().y - paddleHeight/2.f  << " Pad top\n";
+  return paddle.getPosition().x - paddleHeight/2.f ;
+}
+
+float
+Paddle::left()
+{
+  std::cout <<paddle.getPosition().x - paddleWidth/2.f  << " Pad keft\n";  
+  return paddle.getPosition().x - paddleWidth/2.f ;
+}
+
+float
+Paddle::right()
+{
+  std::cout <<paddle.getPosition().x + paddleWidth/2.f  << " Pad right\n";    
+  return paddle.getPosition().x + paddleWidth/2.f;
 }

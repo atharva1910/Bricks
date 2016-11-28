@@ -15,6 +15,11 @@ quitScreen(sf::RenderWindow&);
 //wait for kwy press to restart or stop game
 void
 waitForKey(sf::RenderWindow&);
-  
+
+//template for checking if two objects intersect
+template<class T1,class T2> bool isIntersecting(T1& A, T2& B);
+
+//funtion to change the direction of the ball if intersecting
+void ifCollision( Ball &,Paddle &);
 
 #endif

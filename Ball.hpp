@@ -9,7 +9,7 @@
 class Ball
 {
 private:
-  int height{480},width{620};  
+  int height{480},width{640};  
   float vel{8.f};
 
 public:
@@ -21,7 +21,7 @@ public:
   {
     circle.setFillColor(sf::Color::Red);
     circle.setRadius(10);    
-    setPos();    
+    setPos();    //320,240
   }
 
   //FUNCTIONS
@@ -32,6 +32,12 @@ public:
   void setPos(); //set the position
 
   void setVel(); //reset the velocity
+
+  //Function to find the top,left,right,bottom co-ordinates
+  float top();
+  float bottom();
+  float left();
+  float right();
 };
 
 #endif

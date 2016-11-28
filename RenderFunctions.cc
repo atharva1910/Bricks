@@ -35,3 +35,21 @@ initialize(Ball &ball)
   ball.setPos(); //init ball back to center
   ball.setVel(); //reset the velocity of the ball
 }
+
+
+template<class T1,class T2> bool isIntersecting(T1& A, T2& B)
+//Check if two objects are intersecting
+{
+  return (B.top() < A.bottom() && B.right() > A.left()) || (B.top() < A.bottom() && B.left() < A.right());
+}
+
+
+void ifCollision(Ball &ball,Paddle &paddle)
+//check if ball is colliding with the paddle and change direction
+{
+  //if the paddle and the ball does not collide return 
+  if (!isIntersecting(ball,paddle))
+      return;
+  else
+     ball.velocity.y = - ball.velocity.y;
+}

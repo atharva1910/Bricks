@@ -25,7 +25,11 @@ public:
   void update(); // move the paddle based on key pressed
 
   void setPos(); // reset the position of the paddle at the middle 
-  
+
+  //Function to find the top,left,right,bottom co-ordinates
+  float top();
+  float left();
+  float right();
 };
 
 #endif

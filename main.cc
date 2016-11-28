@@ -26,6 +26,9 @@ int main()
 
     //paddle update
     pad.update();
+
+    //check for collisions
+    ifCollision(ball,pad);
     
     //update the position of the ball
     if(!ball.update()){
