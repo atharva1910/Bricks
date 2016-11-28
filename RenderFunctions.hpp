@@ -1,4 +1,5 @@
 #include "Ball.hpp"
+#include "Paddle.hpp"
 #include <iostream>
 
 //Initialize the game
