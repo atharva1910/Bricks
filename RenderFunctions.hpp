@@ -1,6 +1,8 @@
+#ifndef RFUN_HPP_
+#define RFUN_HPP_ 
 #include "Ball.hpp"
 #include "Paddle.hpp"
-#include <iostream>
+
 
 //Initialize the game
 void
@@ -14,3 +16,5 @@ quitScreen(sf::RenderWindow&);
 void
 waitForKey(sf::RenderWindow&);
   
+
+#endif

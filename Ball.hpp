@@ -1,9 +1,8 @@
+
 #ifndef BALL_HPP_
 #define BALL_HPP_
-
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-#include <iostream>
 /*
   Defines the Ball class
 */
