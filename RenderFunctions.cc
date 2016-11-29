@@ -1,4 +1,5 @@
 #include "RenderFunctions.hpp"
+#include <iostream>
 
 void
 quitScreen(sf::RenderWindow &window)
@@ -40,7 +41,7 @@ initialize(Ball &ball)
 template<class T1,class T2> bool isIntersecting(T1& A, T2& B)
 //Check if two objects are intersecting
 {
-  return (B.top() < A.bottom() && B.right() > A.left()) || (B.top() < A.bottom() && B.left() < A.right());
+  return ((B.top() < A.bottom()) && ((B.right() > A.left()) || B.left() < A.right()));
 }
 
 

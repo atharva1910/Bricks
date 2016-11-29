@@ -44,28 +44,26 @@ Ball::setVel()
 float
 Ball::top()
 {
-  std::cout << circle.getPosition().y - circle.getRadius() << " Ball Top\n";
+  std::cout << "in ball tp" << "\n";
   return (circle.getPosition().y - circle.getRadius());
 }
 
 float
 Ball::bottom()
 {
-  std::cout << circle.getPosition().y + circle.getRadius() << " Ball bot\n";
   return circle.getPosition().y + circle.getRadius();
 }
 
 float
 Ball::left()
 {
-  std::cout << circle.getPosition().x - circle.getRadius() << " Ball left\n";  
   return circle.getPosition().x - circle.getRadius();
 }
 
 float
 Ball::right()
 {
-  std::cout << circle.getPosition().x + circle.getRadius() << " Ball right\n";    
   return circle.getPosition().x + circle.getRadius();
 }
  
+

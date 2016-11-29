@@ -1,5 +1,5 @@
 CC=g++
-LDFLAGS= $(shell pkg-config sfml-all --libs)
+LDFLAGS= $(shell pkg-config sfml-all --libs) -g
 
 all:main.o Ball.o RenderFunctions.o Paddle.o
 	$(CC) main.cc Ball.o RenderFunctions.o Paddle.o -o main $(LDFLAGS)

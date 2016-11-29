@@ -31,7 +31,7 @@ int main()
     ifCollision(ball,pad);
     
     //update the position of the ball
-    if(!ball.update()){
+   if(!ball.update()){
       quitScreen(window); //displays quitscreen
       initialize(ball);   //initlizes the ball back to center
     }

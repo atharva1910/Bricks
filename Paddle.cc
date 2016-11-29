@@ -2,12 +2,14 @@
 #include <iostream>
 
 
+
 void Paddle::update()
 //UPDATE the paddle poistion
 {
   //if right key is pressed and paddle not at the right boundary move right
   if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && (paddleWidth/2.f + paddle.getPosition().x  < rightLimit ))
     paddle.move({paddleVel,0});
+
   
   //if left key is pressed and paddle not at the left boundary move left
   if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && (paddle.getPosition().x - paddleWidth/2.f  > leftLimit ))
@@ -24,20 +26,19 @@ void Paddle::setPos()
 float
 Paddle::top()
 {
-  std::cout <<paddle.getPosition().y - paddleHeight/2.f  << " Pad top\n";
-  return paddle.getPosition().x - paddleHeight/2.f ;
+  return (paddle.getPosition().y - paddleHeight/2.f );
 }
 
 float
 Paddle::left()
 {
-  std::cout <<paddle.getPosition().x - paddleWidth/2.f  << " Pad keft\n";  
+  //  std::cout <<paddle.getPosition().x - paddleWidth/2.f  << " Pad keft\n";  
   return paddle.getPosition().x - paddleWidth/2.f ;
 }
 
 float
 Paddle::right()
 {
-  std::cout <<paddle.getPosition().x + paddleWidth/2.f  << " Pad right\n";    
+  //  std::cout <<paddle.getPosition().x + paddleWidth/2.f  << " Pad right\n";    
   return paddle.getPosition().x + paddleWidth/2.f;
 }
