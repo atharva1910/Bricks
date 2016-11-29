@@ -4,10 +4,14 @@ int main()
 {
   constexpr int width{640},height{480};
   sf::RenderWindow window{sf::VideoMode(width,height), "Bricks"};   //Window size,name
-
+  
   window.setFramerateLimit(60);
   
   Ball ball;
+  
+  std::vector<Brick> wall;
+  
+  wallInit(wall);
 
   Paddle pad;
 
@@ -17,6 +21,9 @@ int main()
   while (window.isOpen()) {
     
     window.clear(sf::Color::Black);
+
+    //Draw the brick wall
+    for(auto& block: wall) window.draw(block.brick);
 
     //Draw the ball
     window.draw(ball.circle);

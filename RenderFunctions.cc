@@ -41,7 +41,8 @@ initialize(Ball &ball)
 template<class T1,class T2> bool isIntersecting(T1& A, T2& B)
 //Check if two objects are intersecting
 {
-  return ((B.top() < A.bottom()) && ((B.right() > A.left())&& (B.left() < A.right()) || B.left() < A.right() && (B.right() > A.right())));
+  //CLEAN THIS SHIT UP.WTF 
+  return ((B.top() < A.bottom()) && ((B.right() > A.left() && B.left() < A.right()) || B.left() < A.right() && (B.right() > A.right())));
 }
 
 
@@ -54,3 +55,22 @@ void ifCollision(Ball &ball,Paddle &paddle)
   else
      ball.velocity.y = - ball.velocity.y;
 }
+
+
+void wallInit(std::vector<Brick> &wall)
+//Create the wall of bricks
+{
+  float brickWidth{55.f},brickHeight{20.f};
+  int brickCols{9},brickRows{5};
+  int x=35,y=25;
+  for(int i{0}; i<brickRows; i++){
+    for(int j{0}; j<brickCols; j++){
+      wall.emplace_back(x,y);
+      x += brickWidth + 15;
+    }
+    x=35;
+    y += brickHeight + 10;      
+  }
+}
+
+    
