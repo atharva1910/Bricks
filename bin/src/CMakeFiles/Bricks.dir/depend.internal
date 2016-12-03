@@ -4,6 +4,9 @@
 src/CMakeFiles/Bricks.dir/Ball.cc.o
  /home/qwn/Documents/Bricks/include/Ball.hpp
  /home/qwn/Documents/Bricks/src/Ball.cc
+src/CMakeFiles/Bricks.dir/Brick.cc.o
+ /home/qwn/Documents/Bricks/include/Brick.hpp
+ /home/qwn/Documents/Bricks/src/Brick.cc
 src/CMakeFiles/Bricks.dir/Paddle.cc.o
  /home/qwn/Documents/Bricks/include/Paddle.hpp
  /home/qwn/Documents/Bricks/src/Paddle.cc

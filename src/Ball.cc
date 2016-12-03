@@ -1,5 +1,5 @@
 #include "../include/Ball.hpp"
-#include <iostream>
+
 
 void
 Ball::setOrign()
@@ -44,8 +44,7 @@ Ball::setVel()
 float
 Ball::top()
 {
-  std::cout << "in ball tp" << "\n";
-  return (circle.getPosition().y - circle.getRadius());
+    return (circle.getPosition().y - circle.getRadius());
 }
 
 float

@@ -30,6 +30,7 @@ public:
   float top();
   float left();
   float right();
+  float bottom();
 };
 
 #endif

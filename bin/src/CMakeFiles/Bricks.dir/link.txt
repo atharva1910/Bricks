@@ -1,1 +1,1 @@
-/usr/bin/c++   -g -Wall   CMakeFiles/Bricks.dir/main.cc.o CMakeFiles/Bricks.dir/Ball.cc.o CMakeFiles/Bricks.dir/Paddle.cc.o CMakeFiles/Bricks.dir/RenderFunctions.cc.o  -o Bricks -rdynamic -lsfml-system -lsfml-window -lsfml-graphics -lsfml-network 
+/usr/bin/c++   -g -Wall   CMakeFiles/Bricks.dir/main.cc.o CMakeFiles/Bricks.dir/Ball.cc.o CMakeFiles/Bricks.dir/Paddle.cc.o CMakeFiles/Bricks.dir/RenderFunctions.cc.o CMakeFiles/Bricks.dir/Brick.cc.o  -o Bricks -rdynamic -lsfml-system -lsfml-window -lsfml-graphics -lsfml-network 

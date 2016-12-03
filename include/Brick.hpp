@@ -7,11 +7,10 @@
 class Brick
 {
 private:
-  float brickWidth{60.f},brickHeight{20.f};  
-  bool isDestroyed{false};
+  float brickWidth{60.f},brickHeight{20.f};
   
 public:
-
+  bool isDestroyed{false};
   sf::RectangleShape brick;
   Brick(float m_x,float m_y)
   {
@@ -26,7 +25,8 @@ public:
   //get brickCols
   int wallColumns();
   int wallRows();
-  void wallInit(std::vector<Brick>& );  
+  void wallInit(std::vector<Brick>& );
+  void changeState();
   //Find the co-ordinates
   float top();
   float bottom();

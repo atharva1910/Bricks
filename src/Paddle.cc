@@ -42,3 +42,10 @@ Paddle::right()
   //  std::cout <<paddle.getPosition().x + paddleWidth/2.f  << " Pad right\n";    
   return paddle.getPosition().x + paddleWidth/2.f;
 }
+
+
+float
+Paddle::bottom()
+{
+  return paddle.getPosition().y + paddleHeight/2.f;
+}

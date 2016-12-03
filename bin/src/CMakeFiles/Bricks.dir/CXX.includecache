@@ -37,8 +37,10 @@ Brick.hpp
 /home/qwn/Documents/Bricks/src/Ball.cc
 ../include/Ball.hpp
 /home/qwn/Documents/Bricks/include/Ball.hpp
-iostream
--
+
+/home/qwn/Documents/Bricks/src/Brick.cc
+../include/Brick.hpp
+/home/qwn/Documents/Bricks/include/Brick.hpp
 
 /home/qwn/Documents/Bricks/src/Paddle.cc
 ../include/Paddle.hpp
@@ -55,4 +57,6 @@ iostream
 /home/qwn/Documents/Bricks/src/main.cc
 ../include/RenderFunctions.hpp
 /home/qwn/Documents/Bricks/include/RenderFunctions.hpp
+iostream
+-
 

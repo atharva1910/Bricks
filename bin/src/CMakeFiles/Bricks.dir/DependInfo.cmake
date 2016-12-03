@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/qwn/Documents/Bricks/src/Ball.cc" "/home/qwn/Documents/Bricks/bin/src/CMakeFiles/Bricks.dir/Ball.cc.o"
+  "/home/qwn/Documents/Bricks/src/Brick.cc" "/home/qwn/Documents/Bricks/bin/src/CMakeFiles/Bricks.dir/Brick.cc.o"
   "/home/qwn/Documents/Bricks/src/Paddle.cc" "/home/qwn/Documents/Bricks/bin/src/CMakeFiles/Bricks.dir/Paddle.cc.o"
   "/home/qwn/Documents/Bricks/src/RenderFunctions.cc" "/home/qwn/Documents/Bricks/bin/src/CMakeFiles/Bricks.dir/RenderFunctions.cc.o"
   "/home/qwn/Documents/Bricks/src/main.cc" "/home/qwn/Documents/Bricks/bin/src/CMakeFiles/Bricks.dir/main.cc.o"

@@ -152,6 +152,33 @@ Ball.cc.s:
 	cd /home/qwn/Documents/Bricks/bin && $(MAKE) -f src/CMakeFiles/Bricks.dir/build.make src/CMakeFiles/Bricks.dir/Ball.cc.s
 .PHONY : Ball.cc.s
 
+Brick.o: Brick.cc.o
+
+.PHONY : Brick.o
+
+# target to build an object file
+Brick.cc.o:
+	cd /home/qwn/Documents/Bricks/bin && $(MAKE) -f src/CMakeFiles/Bricks.dir/build.make src/CMakeFiles/Bricks.dir/Brick.cc.o
+.PHONY : Brick.cc.o
+
+Brick.i: Brick.cc.i
+
+.PHONY : Brick.i
+
+# target to preprocess a source file
+Brick.cc.i:
+	cd /home/qwn/Documents/Bricks/bin && $(MAKE) -f src/CMakeFiles/Bricks.dir/build.make src/CMakeFiles/Bricks.dir/Brick.cc.i
+.PHONY : Brick.cc.i
+
+Brick.s: Brick.cc.s
+
+.PHONY : Brick.s
+
+# target to generate assembly for a file
+Brick.cc.s:
+	cd /home/qwn/Documents/Bricks/bin && $(MAKE) -f src/CMakeFiles/Bricks.dir/build.make src/CMakeFiles/Bricks.dir/Brick.cc.s
+.PHONY : Brick.cc.s
+
 Paddle.o: Paddle.cc.o
 
 .PHONY : Paddle.o
@@ -245,6 +272,9 @@ help:
 	@echo "... Ball.o"
 	@echo "... Ball.i"
 	@echo "... Ball.s"
+	@echo "... Brick.o"
+	@echo "... Brick.i"
+	@echo "... Brick.s"
 	@echo "... Paddle.o"
 	@echo "... Paddle.i"
 	@echo "... Paddle.s"

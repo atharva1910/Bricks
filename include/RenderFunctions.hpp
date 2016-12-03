@@ -21,8 +21,15 @@ waitForKey(sf::RenderWindow&);
 template<class T1,class T2> bool isIntersecting(T1& A, T2& B);
 
 //funtion to change the direction of the ball if intersecting
-void ifCollision( Ball &,Paddle &);
+void
+ifCollision(Ball &,Paddle &);
 
-void wallInit(std::vector<Brick>&);
+//funtion to check if bricks and ball colliding and change state of Bricks 
+void
+ifCollision(Ball &, Brick &);
+
+//Initialize the wall
+void
+wallInit(std::vector<Brick>&);
 
 #endif

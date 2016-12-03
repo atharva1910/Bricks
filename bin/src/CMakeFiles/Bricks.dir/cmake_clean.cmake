@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Bricks.dir/Ball.cc.o"
   "CMakeFiles/Bricks.dir/Paddle.cc.o"
   "CMakeFiles/Bricks.dir/RenderFunctions.cc.o"
+  "CMakeFiles/Bricks.dir/Brick.cc.o"
   "Bricks.pdb"
   "Bricks"
 )
