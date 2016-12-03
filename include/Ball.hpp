@@ -1,4 +1,3 @@
-
 #ifndef BALL_HPP_
 #define BALL_HPP_
 #include <SFML/Window.hpp>
@@ -14,7 +13,7 @@ private:
 
 public:
   sf::CircleShape circle; // defines circle
-  
+
   sf::Vector2f velocity{-vel,-vel}; //velocity of the ball
   
   Ball()   //constructor

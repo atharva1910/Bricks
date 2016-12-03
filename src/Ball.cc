@@ -1,4 +1,4 @@
-#include "Ball.hpp"
+#include "../include/Ball.hpp"
 #include <iostream>
 
 void

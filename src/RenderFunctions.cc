@@ -1,4 +1,4 @@
-#include "RenderFunctions.hpp"
+#include "../include/RenderFunctions.hpp"
 #include <iostream>
 
 void
@@ -7,7 +7,9 @@ quitScreen(sf::RenderWindow &window)
   //Show quitScreen
   
   sf::Font font;
-  if(!font.loadFromFile("Unique.ttf")) exit(0);
+  if(!font.loadFromFile("Unique.ttf")) {
+    exit(0);
+  }
   
   sf::Text text;
   text.setFont(font);

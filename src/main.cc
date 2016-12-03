@@ -1,10 +1,10 @@
-#include "RenderFunctions.hpp"
+#include "../include/RenderFunctions.hpp"
 
 int main()
 {
   constexpr int width{640},height{480};
   sf::RenderWindow window{sf::VideoMode(width,height), "Bricks"};   //Window size,name
-  
+
   window.setFramerateLimit(60);
   
   Ball ball;
