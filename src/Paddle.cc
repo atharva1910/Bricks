@@ -3,7 +3,8 @@
 
 
 
-void Paddle::update()
+void
+Paddle::update()
 //UPDATE the paddle poistion
 {
   //if right key is pressed and paddle not at the right boundary move right
@@ -17,7 +18,8 @@ void Paddle::update()
 }
 
 
-void Paddle::setPos()
+void
+Paddle::setPos()
 //Set the postion of the paddle at the mid
 {
   paddle.setPosition(rightLimit/2.f , 480 - paddleHeight);

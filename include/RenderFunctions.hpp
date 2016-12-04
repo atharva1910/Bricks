@@ -7,7 +7,7 @@
 
 //Initialize the game
 void
-initialize(Ball &);
+initialize(Ball &,Paddle &);
 
 //Show quitScreen
 void

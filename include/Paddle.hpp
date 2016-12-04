@@ -9,7 +9,7 @@ class Paddle
 private:
   int rightLimit{640},leftLimit{0};
   float paddleWidth{60.f},paddleHeight{20.f}; //set the width and height of the paddlw 
-  float paddleVel{6.f}; //evlocity of the paddle
+  float paddleVel{6.5}; //evlocity of the paddle
 public:
   sf::RectangleShape paddle;
   sf::Vector2f velocity ;

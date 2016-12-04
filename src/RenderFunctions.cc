@@ -1,5 +1,4 @@
 #include "../include/RenderFunctions.hpp"
-#include <iostream>
 
 void
 quitScreen(sf::RenderWindow &window)
@@ -7,13 +6,14 @@ quitScreen(sf::RenderWindow &window)
   //Show quitScreen
   
   sf::Font font;
-  if(!font.loadFromFile("Unique.ttf")) {
-    exit(0);
-  }
+  if(!font.loadFromFile("Unique.ttf")) exit(0);
+
   
   sf::Text text;
   text.setFont(font);
   text.setCharacterSize(25);
+  text.setFillColor(sf::Color::Magenta);
+  text.setPosition(25,210);
   text.setString("GAME OVER PRESS ESCAPE TO QUIT SPACE TO RESTART");
   window.draw(text);
   window.display();
@@ -33,10 +33,11 @@ waitForKey(sf::RenderWindow& window)
 
 
 void
-initialize(Ball &ball)
+initialize(Ball &ball,Paddle &pad)
 {
   ball.setPos(); //init ball back to center
   ball.setVel(); //reset the velocity of the ball
+  pad.setPos(); //reset the position of the paddle
 }
 
 
@@ -76,8 +77,11 @@ void wallInit(std::vector<Brick> &wall)
 
 
 void ifCollision(Ball &ball,Brick &brick)
+//Check collision between ball and brick
 {
-  if(isIntersecting(brick,ball))
-      brick.isDestroyed = true;
+  if(isIntersecting(brick,ball)){
+    brick.isDestroyed = true;
+    ball.velocity.y = - ball.velocity.y; //Deflect the ball
+  }
 }
   

@@ -8,8 +8,8 @@
 class Ball
 {
 private:
-  int height{480},width{640};  
-  float vel{8.f};
+  int height{480},width{640};
+  float vel{6.f};
 
 public:
   sf::CircleShape circle; // defines circle

@@ -16,7 +16,7 @@ int main()
 
   Paddle pad;
 
-  initialize(ball);
+  initialize(ball,pad);
   
   //Main loop
   while (window.isOpen()) {
@@ -26,7 +26,6 @@ int main()
     //Draw the brick wall
     for(auto& block: wall) 
       window.draw(block.brick);
-
 
     //Draw the ball
     window.draw(ball.circle);
@@ -42,12 +41,12 @@ int main()
 
     //check collision between ball and the bricks
     for(auto& block: wall) ifCollision(ball,block);
-    wall.erase(remove_if(begin(wall),end(wall),
-                          [] (const Brick &brick){return brick.isDestroyed;}),end(wall));
+        wall.erase(remove_if(begin(wall),end(wall),
+                        [] (const Brick &brick){return brick.isDestroyed;}),end(wall));
     //update the position of the ball
    if(!ball.update()){
       quitScreen(window); //displays quitscreen
-      initialize(ball);   //initlizes the ball back to center
+      initialize(ball,pad);   //initlizes the ball back to center
     }
     
     window.display();          
